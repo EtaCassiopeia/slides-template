@@ -1,0 +1,166 @@
+/**
+ * Rift Presentation Color Palette
+ * Dark theme CSS variables for consistent styling
+ */
+
+:root {
+  /* ========== BACKGROUNDS ========== */
+  --bg-primary: #0f0f1a;           /* Main slide background */
+  --bg-secondary: #1a1b2e;         /* Code blocks, elevated surfaces */
+  --bg-card: #1e2235;              /* Card backgrounds */
+  --bg-card-hover: #252a40;        /* Card hover state */
+  --bg-elevated: #252836;          /* Elevated surfaces */
+
+  /* ========== ACCENT COLORS ========== */
+  --accent-coral: #E07A5F;         /* Primary brand - Rift logo, highlights */
+  --accent-green: #81B29A;         /* Success, checkmarks, positive */
+  --accent-blue: #6366F1;          /* Links, interactive, info */
+  --accent-purple: #8B5CF6;        /* Features, special callouts */
+  --accent-yellow: #F59E0B;        /* Warnings, attention */
+  --accent-red: #EF4444;           /* Errors, negative states */
+  --accent-teal: #14B8A6;          /* Alternative accent */
+
+  /* ========== TEXT COLORS ========== */
+  --text-primary: #FFFFFF;         /* Headings, important text */
+  --text-secondary: #9CA3AF;       /* Body text, descriptions */
+  --text-muted: #6B7280;           /* Labels, captions */
+  --text-disabled: #4B5563;        /* Disabled states */
+
+  /* ========== BORDERS ========== */
+  --border-default: #2D3348;       /* Card borders, dividers */
+  --border-subtle: #1F2937;        /* Subtle separators */
+  --border-focus: #6366F1;         /* Focus rings */
+
+  /* ========== OVERLAY COLORS ========== */
+  --overlay-grid: rgba(99, 102, 241, 0.08);
+  --overlay-coral: rgba(224, 122, 95, 0.15);
+  --overlay-green: rgba(129, 178, 154, 0.15);
+  --overlay-blue: rgba(99, 102, 241, 0.15);
+  --overlay-purple: rgba(139, 92, 246, 0.15);
+  --overlay-red: rgba(239, 68, 68, 0.15);
+  --overlay-yellow: rgba(245, 158, 11, 0.15);
+
+  /* ========== CODE HIGHLIGHTING ========== */
+  --code-bg: #1a1b2e;
+  --code-keyword: #C792EA;
+  --code-string: #C3E88D;
+  --code-number: #F78C6C;
+  --code-comment: #546E7A;
+  --code-function: #82AAFF;
+  --code-variable: #EEFFFF;
+  --code-property: #FFCB6B;
+  --code-punctuation: #89DDFF;
+
+  /* ========== SHADOWS ========== */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-glow-coral: 0 0 20px rgba(224, 122, 95, 0.3);
+  --shadow-glow-green: 0 0 20px rgba(129, 178, 154, 0.3);
+  --shadow-glow-blue: 0 0 20px rgba(99, 102, 241, 0.3);
+
+  /* ========== GRADIENTS ========== */
+  --gradient-coral-fade: linear-gradient(135deg, rgba(224, 122, 95, 0.2) 0%, rgba(224, 122, 95, 0) 100%);
+  --gradient-blue-fade: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0) 100%);
+  --gradient-card-shine: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+
+  /* ========== TYPOGRAPHY ========== */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+
+  /* ========== SPACING ========== */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+/* Background utilities */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-card { background-color: var(--bg-card); }
+
+/* Text color utilities */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-coral { color: var(--accent-coral); }
+.text-green { color: var(--accent-green); }
+.text-blue { color: var(--accent-blue); }
+.text-purple { color: var(--accent-purple); }
+.text-yellow { color: var(--accent-yellow); }
+.text-red { color: var(--accent-red); }
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-coral {
+  background: var(--overlay-coral);
+  border: 1px solid rgba(224, 122, 95, 0.3);
+  color: var(--accent-coral);
+}
+
+.badge-green {
+  background: var(--overlay-green);
+  border: 1px solid rgba(129, 178, 154, 0.3);
+  color: var(--accent-green);
+}
+
+.badge-blue {
+  background: var(--overlay-blue);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: var(--accent-blue);
+}
+
+.badge-purple {
+  background: var(--overlay-purple);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: var(--accent-purple);
+}
+
+.badge-red {
+  background: var(--overlay-red);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--accent-red);
+}
+
+.badge-yellow {
+  background: var(--overlay-yellow);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--accent-yellow);
+}
+
+/* Card styles */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.card-highlighted {
+  background: var(--bg-card);
+  border: 1px solid var(--accent-coral);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background:
+    linear-gradient(var(--overlay-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--overlay-grid) 1px, transparent 1px),
+    var(--bg-primary);
+  background-size: 50px 50px;
+}

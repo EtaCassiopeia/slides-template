@@ -1,0 +1,285 @@
+/**
+ * Rift Presentation Typography System
+ * Font specifications for recreating the presentation style
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ============================================
+   FONT FAMILY DEFINITIONS
+   ============================================ */
+
+:root {
+    /* Primary Sans-Serif Font */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Monospace Font for Code */
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Consolas', monospace;
+}
+
+
+/* ============================================
+   TYPOGRAPHY SCALE
+   ============================================
+
+   GOOGLE SLIDES EQUIVALENT:
+   - Heading 1: Title text, 60pt
+   - Heading 2: Subtitle/section, 36pt
+   - Heading 3: Card titles, 24pt
+   - Body: Normal text, 18pt
+   - Small: Captions, 14pt
+   - Label: All caps labels, 12pt
+
+*/
+
+/* HEADING 1 - Main Slide Titles
+   Font: Inter Bold (700)
+   Size: 2.5rem / 40px / 60pt in Slides
+   Line Height: 1.2
+   Color: #FFFFFF (white)
+   Usage: Slide titles like "Zero-Friction Migration"
+*/
+.h1, .heading-1 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 2.5rem;      /* 40px */
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+/* HEADING 1 ACCENT - For "Rift:" branded titles
+   Same as H1 but with coral color for brand word
+*/
+.h1-accent {
+    color: #E07A5F;
+}
+
+
+/* HEADING 2 - Section Headers
+   Font: Inter Semi-Bold (600)
+   Size: 1.75rem / 28px / 36pt in Slides
+   Line Height: 1.3
+   Color: #FFFFFF
+   Usage: Sub-sections, panel titles
+*/
+.h2, .heading-2 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.75rem;     /* 28px */
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
+
+
+/* HEADING 3 - Card/Panel Titles
+   Font: Inter Semi-Bold (600)
+   Size: 1.25rem / 20px / 24pt in Slides
+   Line Height: 1.4
+   Color: #E07A5F (coral) or #FFFFFF
+   Usage: Card headers, feature titles
+*/
+.h3, .heading-3 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.25rem;     /* 20px */
+    line-height: 1.4;
+    color: #E07A5F;
+}
+
+.h3-white {
+    color: #FFFFFF;
+}
+
+
+/* HEADING 4 - Small Headers
+   Font: Inter Medium (500)
+   Size: 1rem / 16px / 18pt in Slides
+   Color: #FFFFFF
+*/
+.h4, .heading-4 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1rem;        /* 16px */
+    line-height: 1.4;
+    color: #FFFFFF;
+}
+
+
+/* BODY TEXT - Main Content
+   Font: Inter Regular (400)
+   Size: 1rem / 16px / 18pt in Slides
+   Line Height: 1.6
+   Color: #9CA3AF (secondary gray)
+   Usage: Paragraphs, descriptions
+*/
+.body, .body-text {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 1rem;        /* 16px */
+    line-height: 1.6;
+    color: #9CA3AF;
+}
+
+
+/* BODY LARGE - Emphasized Body
+   Font: Inter Regular (400)
+   Size: 1.125rem / 18px / 20pt in Slides
+   Usage: Key statements, important info
+*/
+.body-large {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 1.125rem;    /* 18px */
+    line-height: 1.6;
+    color: #9CA3AF;
+}
+
+
+/* SMALL TEXT - Captions & Notes
+   Font: Inter Regular (400)
+   Size: 0.875rem / 14px / 14pt in Slides
+   Color: #6B7280 (muted)
+   Usage: Benchmark notes, footnotes
+*/
+.small, .small-text {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.875rem;    /* 14px */
+    line-height: 1.5;
+    color: #6B7280;
+}
+
+
+/* LABEL TEXT - Category Labels
+   Font: Inter Medium (500)
+   Size: 0.75rem / 12px / 12pt in Slides
+   Transform: UPPERCASE
+   Letter Spacing: 0.1em (wide)
+   Color: #6B7280 (muted)
+   Usage: "PERFORMANCE SPEEDUP", "TEST SCENARIO"
+*/
+.label, .label-text {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.75rem;     /* 12px */
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6B7280;
+}
+
+
+/* STAT NUMBER - Large Statistics
+   Font: Inter Bold (700)
+   Size: 3rem / 48px / 72pt in Slides
+   Color: Varies (coral, green, etc.)
+   Usage: "20-250x", "674", "100%"
+*/
+.stat-number {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 3rem;        /* 48px */
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.stat-number-small {
+    font-size: 2rem;        /* 32px */
+}
+
+
+/* CODE INLINE - Inline Code Snippets
+   Font: JetBrains Mono Regular (400)
+   Size: 0.875em (relative to parent)
+   Background: #1E2235
+   Padding: 2px 8px
+   Border Radius: 4px
+   Color: #E07A5F (coral)
+   Usage: `configfile`, `--datadir`
+*/
+.code, .inline-code {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 0.875em;
+    background: #1E2235;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #E07A5F;
+}
+
+
+/* CODE BLOCK - Multi-line Code
+   Font: JetBrains Mono Regular (400)
+   Size: 0.85rem / 13.6px / 14pt in Slides
+   Line Height: 1.6
+   Background: #1A1B2E
+   Usage: JSON configs, bash commands
+*/
+.code-block-text {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 0.85rem;     /* ~14px */
+    line-height: 1.6;
+    color: #9CA3AF;
+}
+
+
+/* BADGE TEXT - Pill/Badge Labels
+   Font: Inter Medium (500)
+   Size: 0.75rem / 12px
+   Transform: UPPERCASE
+   Letter Spacing: 0.05em
+   Usage: "WRITTEN IN RUST", "100% COVERAGE"
+*/
+.badge-text {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+/* ============================================
+   FONT WEIGHT REFERENCE
+   ============================================
+
+   Inter Font Weights:
+   - 400: Regular   (body text, descriptions)
+   - 500: Medium    (labels, badges, buttons)
+   - 600: Semi-Bold (h2, h3, card titles)
+   - 700: Bold      (h1, statistics)
+   - 800: Extra-Bold (hero text, rarely used)
+
+   JetBrains Mono Weights:
+   - 400: Regular   (code blocks)
+   - 500: Medium    (highlighted code)
+
+*/
+
+
+/* ============================================
+   GOOGLE SLIDES FONT MAPPING
+   ============================================
+
+   Since Google Slides may not have Inter, use these alternatives:
+
+   PRIMARY FONT: "Roboto" or "Open Sans"
+   - Similar x-height and proportions to Inter
+   - Available in Google Slides by default
+
+   MONOSPACE: "Roboto Mono" or "Source Code Pro"
+   - Similar to JetBrains Mono
+   - Available in Google Slides
+
+   FONT SIZE CONVERSION (Web → Slides):
+   - 2.5rem (40px) → 60pt
+   - 1.75rem (28px) → 36pt
+   - 1.25rem (20px) → 24pt
+   - 1rem (16px) → 18pt
+   - 0.875rem (14px) → 14pt
+   - 0.75rem (12px) → 12pt
+
+*/

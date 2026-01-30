@@ -1,0 +1,164 @@
+{
+  "name": "Rift Presentation Color Palette",
+  "description": "Dark theme color palette extracted from the Rift presentation",
+  "colors": {
+    "backgrounds": {
+      "primary": {
+        "hex": "#0f0f1a",
+        "rgb": "rgb(15, 15, 26)",
+        "description": "Main slide background - very dark blue-black"
+      },
+      "secondary": {
+        "hex": "#1a1b2e",
+        "rgb": "rgb(26, 27, 46)",
+        "description": "Code blocks, elevated surfaces"
+      },
+      "card": {
+        "hex": "#1e2235",
+        "rgb": "rgb(30, 34, 53)",
+        "description": "Card backgrounds, containers"
+      },
+      "cardHover": {
+        "hex": "#252a40",
+        "rgb": "rgb(37, 42, 64)",
+        "description": "Card hover state"
+      },
+      "elevated": {
+        "hex": "#252836",
+        "rgb": "rgb(37, 40, 54)",
+        "description": "Elevated card surfaces"
+      }
+    },
+    "accents": {
+      "coral": {
+        "hex": "#E07A5F",
+        "rgb": "rgb(224, 122, 95)",
+        "description": "Primary brand accent - Rift branding, highlights, important numbers"
+      },
+      "green": {
+        "hex": "#81B29A",
+        "rgb": "rgb(129, 178, 154)",
+        "description": "Success states, checkmarks, positive metrics"
+      },
+      "blue": {
+        "hex": "#6366F1",
+        "rgb": "rgb(99, 102, 241)",
+        "description": "Links, interactive elements, info badges"
+      },
+      "purple": {
+        "hex": "#8B5CF6",
+        "rgb": "rgb(139, 92, 246)",
+        "description": "Feature highlights, special callouts"
+      },
+      "yellow": {
+        "hex": "#F59E0B",
+        "rgb": "rgb(245, 158, 11)",
+        "description": "Warnings, attention, metrics"
+      },
+      "red": {
+        "hex": "#EF4444",
+        "rgb": "rgb(239, 68, 68)",
+        "description": "Errors, negative states, problems"
+      },
+      "teal": {
+        "hex": "#14B8A6",
+        "rgb": "rgb(20, 184, 166)",
+        "description": "Alternative accent for variety"
+      }
+    },
+    "text": {
+      "primary": {
+        "hex": "#FFFFFF",
+        "rgb": "rgb(255, 255, 255)",
+        "description": "Headings, important text"
+      },
+      "secondary": {
+        "hex": "#9CA3AF",
+        "rgb": "rgb(156, 163, 175)",
+        "description": "Body text, descriptions"
+      },
+      "muted": {
+        "hex": "#6B7280",
+        "rgb": "rgb(107, 114, 128)",
+        "description": "Labels, captions, subtle text"
+      },
+      "disabled": {
+        "hex": "#4B5563",
+        "rgb": "rgb(75, 85, 99)",
+        "description": "Disabled states"
+      }
+    },
+    "borders": {
+      "default": {
+        "hex": "#2D3348",
+        "rgb": "rgb(45, 51, 72)",
+        "description": "Card borders, dividers"
+      },
+      "subtle": {
+        "hex": "#1F2937",
+        "rgb": "rgb(31, 41, 55)",
+        "description": "Subtle separators"
+      },
+      "focus": {
+        "hex": "#6366F1",
+        "rgb": "rgb(99, 102, 241)",
+        "description": "Focus rings"
+      }
+    },
+    "overlays": {
+      "grid": {
+        "value": "rgba(99, 102, 241, 0.08)",
+        "description": "Grid pattern overlay on backgrounds"
+      },
+      "coralLight": {
+        "value": "rgba(224, 122, 95, 0.15)",
+        "description": "Light coral for badges/highlights"
+      },
+      "greenLight": {
+        "value": "rgba(129, 178, 154, 0.15)",
+        "description": "Light green for success badges"
+      },
+      "blueLight": {
+        "value": "rgba(99, 102, 241, 0.15)",
+        "description": "Light blue for info badges"
+      },
+      "purpleLight": {
+        "value": "rgba(139, 92, 246, 0.15)",
+        "description": "Light purple for feature badges"
+      },
+      "redLight": {
+        "value": "rgba(239, 68, 68, 0.15)",
+        "description": "Light red for error states"
+      },
+      "yellowLight": {
+        "value": "rgba(245, 158, 11, 0.15)",
+        "description": "Light yellow for warnings"
+      }
+    },
+    "codeHighlighting": {
+      "background": "#1a1b2e",
+      "keyword": "#C792EA",
+      "string": "#C3E88D",
+      "number": "#F78C6C",
+      "comment": "#546E7A",
+      "function": "#82AAFF",
+      "variable": "#EEFFFF",
+      "property": "#FFCB6B",
+      "punctuation": "#89DDFF"
+    }
+  },
+  "gradients": {
+    "coralFade": "linear-gradient(135deg, rgba(224, 122, 95, 0.2) 0%, rgba(224, 122, 95, 0) 100%)",
+    "blueFade": "linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0) 100%)",
+    "cardShine": "linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%)"
+  },
+  "shadows": {
+    "card": "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)",
+    "elevated": "0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3)",
+    "glow": {
+      "coral": "0 0 20px rgba(224, 122, 95, 0.3)",
+      "green": "0 0 20px rgba(129, 178, 154, 0.3)",
+      "blue": "0 0 20px rgba(99, 102, 241, 0.3)"
+    }
+  }
+}

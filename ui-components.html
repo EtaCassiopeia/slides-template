@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rift Presentation - UI Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ui-components.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 40px;
+            min-height: 100vh;
+        }
+        .demo-section {
+            margin-bottom: 60px;
+        }
+        .demo-section h2 {
+            color: var(--accent-coral);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-default);
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .demo-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .demo-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        h1 { margin-bottom: 8px; }
+        .subtitle { color: var(--text-secondary); margin-bottom: 50px; }
+    </style>
+</head>
+<body>
+    <h1>UI Components</h1>
+    <p class="subtitle">Complete component library for the Rift presentation design system</p>
+
+    <!-- TYPOGRAPHY -->
+    <div class="demo-section">
+        <h2>Typography</h2>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Heading 1 - Inter 700 / 2.5rem</p>
+            <h1 class="heading-1">High-Performance Service Virtualization</h1>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Heading 1 with Accent</p>
+            <h1 class="heading-1"><span class="text-coral">Rift:</span> High-Performance Service Virtualization</h1>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Heading 2 - Inter 600 / 1.75rem</p>
+            <h2 class="heading-2">Zero-Friction Migration</h2>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Heading 3 - Inter 600 / 1.25rem</p>
+            <h3 class="heading-3">Why Rift Is Faster</h3>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Body Text - Inter 400 / 1rem</p>
+            <p class="body-text">Rift is a high-performance mock server written in Rust that's 100% compatible with Mountebank's API. You can take your existing configurations and run them on Rift without changing a single line.</p>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Small Text - Inter 400 / 0.875rem</p>
+            <p class="small-text">Benchmarks: 15s duration, 50 concurrent connections, 2 CPUs, 1GB RAM</p>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Code / Monospace - JetBrains Mono 400</p>
+            <code class="inline-code">rift-http-proxy --configfile imposters.json</code>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p class="demo-label">Label / Caption - Inter 500 / 0.75rem / Uppercase</p>
+            <span class="label-text">Performance Speedup</span>
+        </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="demo-section">
+        <h2>Buttons</h2>
+        <p class="demo-label">Primary Buttons</p>
+        <div class="demo-row">
+            <button class="btn btn-coral">Get Started</button>
+            <button class="btn btn-green">Try It Today</button>
+            <button class="btn btn-blue">Learn More</button>
+            <button class="btn btn-purple">New Feature</button>
+        </div>
+        <p class="demo-label">Outline Buttons</p>
+        <div class="demo-row">
+            <button class="btn btn-outline-coral">Get Started</button>
+            <button class="btn btn-outline-green">Try It Today</button>
+            <button class="btn btn-outline-blue">Learn More</button>
+            <button class="btn btn-outline-white">Documentation</button>
+        </div>
+        <p class="demo-label">Ghost Buttons (Text Only)</p>
+        <div class="demo-row">
+            <button class="btn btn-ghost">View Details →</button>
+            <button class="btn btn-ghost-coral">View Details →</button>
+        </div>
+        <p class="demo-label">Button with Icon</p>
+        <div class="demo-row">
+            <button class="btn btn-coral"><img src="icons/rocket.svg" alt="" style="width:16px;height:16px;filter:brightness(10);margin-right:8px;">Launch Demo</button>
+            <button class="btn btn-outline-green"><img src="icons/play.svg" alt="" style="width:16px;height:16px;margin-right:8px;">Run Tests</button>
+        </div>
+        <p class="demo-label">Small Buttons</p>
+        <div class="demo-row">
+            <button class="btn btn-sm btn-coral">Small</button>
+            <button class="btn btn-sm btn-outline-blue">Small Outline</button>
+        </div>
+    </div>
+
+    <!-- BADGES -->
+    <div class="demo-section">
+        <h2>Badges & Pills</h2>
+        <p class="demo-label">Standard Badges</p>
+        <div class="demo-row">
+            <span class="badge badge-coral">Written in Rust</span>
+            <span class="badge badge-green">Mountebank Compatible</span>
+            <span class="badge badge-blue">100% Coverage</span>
+            <span class="badge badge-purple">New Feature</span>
+            <span class="badge badge-yellow">Warning</span>
+            <span class="badge badge-red">Breaking Change</span>
+        </div>
+        <p class="demo-label">Badges with Icons</p>
+        <div class="demo-row">
+            <span class="badge badge-coral"><img src="icons/rust-gear.svg" alt="" style="width:14px;height:14px;">Written in Rust</span>
+            <span class="badge badge-green"><img src="icons/checkmark.svg" alt="" style="width:14px;height:14px;">Compatible</span>
+            <span class="badge badge-yellow"><img src="icons/warning.svg" alt="" style="width:14px;height:14px;">Caution</span>
+        </div>
+        <p class="demo-label">Status Pills</p>
+        <div class="demo-row">
+            <span class="pill pill-green">● Active</span>
+            <span class="pill pill-yellow">● Pending</span>
+            <span class="pill pill-red">● Failed</span>
+            <span class="pill pill-blue">● In Progress</span>
+        </div>
+        <p class="demo-label">Metric Badges</p>
+        <div class="demo-row">
+            <span class="metric-badge metric-green">↑ 20x Faster</span>
+            <span class="metric-badge metric-green">↑ 247x Faster</span>
+            <span class="metric-badge metric-red">↓ Slower</span>
+        </div>
+    </div>
+
+    <!-- PANELS / CARDS -->
+    <div class="demo-section">
+        <h2>Panels & Cards</h2>
+        <div class="demo-grid">
+            <!-- Basic Card -->
+            <div>
+                <p class="demo-label">Basic Card</p>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon card-icon-coral">
+                            <img src="icons/rocket.svg" alt="">
+                        </div>
+                        <span class="card-title">Technology Stack</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Mimeo: TypeScript wrapper providing type safety. Mountebank: Node.js-based core mock server.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card with List -->
+            <div>
+                <p class="demo-label">Card with Check List</p>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon card-icon-green">
+                            <img src="icons/checkmark-circle.svg" alt="">
+                        </div>
+                        <span class="card-title">Features Supported</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="check-list">
+                            <li>CORS Support enabled</li>
+                            <li>Complex Predicates</li>
+                            <li>JavaScript Behaviors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlighted Card -->
+            <div>
+                <p class="demo-label">Highlighted Card (Success)</p>
+                <div class="card card-success">
+                    <div class="card-header">
+                        <div class="card-icon card-icon-green">
+                            <img src="icons/shield.svg" alt="">
+                        </div>
+                        <span class="card-title">100% Functional</span>
+                    </div>
+                    <div class="card-content">
+                        <p>All configurations loaded successfully on Rift. No modifications or regressions found.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning Card -->
+            <div>
+                <p class="demo-label">Warning Card</p>
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <div class="card-icon card-icon-yellow">
+                            <img src="icons/warning.svg" alt="">
+                        </div>
+                        <span class="card-title">Limitations</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Rift does not support TCP, SMTP, or LDAP protocols. Use Mountebank for non-HTTP services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Card with Stat -->
+            <div>
+                <p class="demo-label">Feature Card with Stat</p>
+                <div class="card">
+                    <div class="card-icon-large card-icon-coral">
+                        <img src="icons/rocket.svg" alt="">
+                    </div>
+                    <h3 class="card-stat-title">Faster CI/CD</h3>
+                    <p class="card-stat-desc">Drastic reduction in mock server overhead directly translates to faster pipeline execution.</p>
+                    <div class="card-stat-value text-coral">20-250x</div>
+                    <div class="card-stat-label text-coral">Faster Responses</div>
+                </div>
+            </div>
+
+            <!-- Info Card -->
+            <div>
+                <p class="demo-label">Info Card</p>
+                <div class="card card-info">
+                    <div class="card-header">
+                        <div class="card-icon card-icon-blue">
+                            <img src="icons/info-circle.svg" alt="">
+                        </div>
+                        <span class="card-title">Mountebank Compatible</span>
+                    </div>
+                    <div class="card-content">
+                        <p>The <code class="inline-code">_rift</code> key is ignored by standard Mountebank instances, allowing you to use the same config across tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPARISON PANELS -->
+    <div class="demo-section">
+        <h2>Comparison Panels</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <!-- Negative Panel -->
+            <div class="compare-panel compare-panel-negative">
+                <div class="compare-panel-header">
+                    <img src="icons/settings.svg" alt="" style="width:20px;">
+                    <span class="compare-panel-title">Mountebank (Node.js)</span>
+                    <span class="compare-panel-badge badge-red">Interpreted Runtime</span>
+                </div>
+                <div class="compare-panel-content">
+                    <div class="compare-item">
+                        <div class="compare-item-icon compare-icon-red">✗</div>
+                        <div class="compare-item-text">
+                            <strong>V8 JavaScript Interpreter</strong>
+                            <span>Runtime interpretation adds overhead</span>
+                        </div>
+                    </div>
+                    <div class="compare-item">
+                        <div class="compare-item-icon compare-icon-red">✗</div>
+                        <div class="compare-item-text">
+                            <strong>GC Pauses</strong>
+                            <span>Garbage collection causes latency spikes</span>
+                        </div>
+                    </div>
+                    <div class="compare-item">
+                        <div class="compare-item-icon compare-icon-red">✗</div>
+                        <div class="compare-item-text">
+                            <strong>Single-Threaded Loop</strong>
+                            <span>Cannot utilize multiple CPU cores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-panel-footer">
+                    <span class="compare-stat-label">MOUNTEBANK RPS</span>
+                    <span class="compare-stat-value text-red">1,914</span>
+                </div>
+            </div>
+
+            <!-- Positive Panel -->
+            <div class="compare-panel compare-panel-positive">
+                <div class="compare-panel-header">
+                    <img src="icons/rust-gear.svg" alt="" style="width:20px;">
+                    <span class="compare-panel-title">Rift (Rust)</span>
+                    <span class="compare-panel-badge badge-green">Native Binary</span>
+                </div>
+                <div class="compare-panel-content">
+                    <div class="compare-item">
+                        <div class="compare-item-icon compare-icon-green">✓</div>
+                        <div class="compare-item-text">
+                            <strong>Native Compiled Binary</strong>
+                            <span>Direct machine code execution</span>
+                        </div>
+                    </div>
+                    <div class="compare-item">
+                        <div class="compare-item-icon compare-icon-green">✓</div>
+                        <div class="compare-item-text">
+                            <strong>Zero Garbage Collection</strong>
+                            <span>Predictable latency, no pauses</span>
+                        </div>
+                    </div>
+                    <div class="compare-item">
+                        <div class="compare-item-icon compare-icon-green">✓</div>
+                        <div class="compare-item-text">
+                            <strong>Async I/O (Tokio)</strong>
+                            <span>Efficiently uses all CPU cores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-panel-footer">
+                    <span class="compare-stat-label">RIFT RPS</span>
+                    <span class="compare-stat-value text-green">39,127</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP PANELS -->
+    <div class="demo-section">
+        <h2>Step / Process Panels</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 600px;">
+            <div class="step-panel">
+                <div class="step-number step-number-green">1</div>
+                <div class="step-content">
+                    <h4 class="step-title">Replace Docker Image</h4>
+                    <p class="step-desc">Change one line in your docker-compose or Kubernetes deployment.</p>
+                </div>
+                <span class="step-badge badge-green">Docker image swap</span>
+            </div>
+            <div class="step-panel">
+                <div class="step-number step-number-blue">2</div>
+                <div class="step-content">
+                    <h4 class="step-title">Use Existing Configuration</h4>
+                    <p class="step-desc">Rift accepts the standard Mountebank CLI flags.</p>
+                </div>
+                <span class="step-badge badge-blue">No config changes required</span>
+            </div>
+            <div class="step-panel">
+                <div class="step-number step-number-purple">3</div>
+                <div class="step-content">
+                    <h4 class="step-title">Run Tests</h4>
+                    <p class="step-desc">Your tests run exactly as before, just significantly faster.</p>
+                </div>
+                <span class="step-badge badge-green">100% Compatible</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CODE BLOCKS -->
+    <div class="demo-section">
+        <h2>Code Blocks</h2>
+        <p class="demo-label">Code Block with Header</p>
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-filename">imposter-config.json</span>
+                <span class="badge badge-blue" style="font-size: 10px; padding: 4px 8px;">JSON</span>
+            </div>
+            <pre class="code-content"><code>{
+  <span class="code-property">"port"</span>: <span class="code-number">8114</span>,
+  <span class="code-property">"protocol"</span>: <span class="code-string">"http"</span>,
+  <span class="code-property">"stubs"</span>: [{
+    <span class="code-property">"predicates"</span>: [
+      {<span class="code-property">"contains"</span>: { <span class="code-property">"body"</span>: <span class="code-string">"12345"</span> }}
+    ],
+    <span class="code-property">"responses"</span>: [{
+      <span class="code-property">"is"</span>: { <span class="code-property">"statusCode"</span>: <span class="code-number">200</span> }
+    }]
+  }]
+}</code></pre>
+        </div>
+
+        <p class="demo-label" style="margin-top: 24px;">Terminal / Bash Block</p>
+        <div class="code-block code-block-terminal">
+            <div class="code-header">
+                <div class="terminal-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <span class="code-filename">bash</span>
+            </div>
+            <pre class="code-content"><code><span class="code-comment"># Pull the official image</span>
+$ docker pull zainalpour/rift-proxy:latest
+
+<span class="code-comment"># Run with your existing configs</span>
+$ docker run -p 2525:2525 -p 4545:4545 \
+  -v ./imposters:/imposters \
+  zainalpour/rift-proxy:latest \
+  --datadir /imposters</code></pre>
+        </div>
+    </div>
+
+    <!-- ALERT BOXES -->
+    <div class="demo-section">
+        <h2>Alert Boxes</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 600px;">
+            <div class="alert alert-info">
+                <img src="icons/info-circle.svg" alt="" style="width:20px;">
+                <div>
+                    <strong>Key Insight:</strong> Same API, Same Configs, Dramatically Better Performance
+                </div>
+            </div>
+            <div class="alert alert-success">
+                <img src="icons/checkmark-circle.svg" alt="" style="width:20px;">
+                <div>
+                    <strong>Result:</strong> All 674 stubs loaded and functional on Rift with no modifications.
+                </div>
+            </div>
+            <div class="alert alert-warning">
+                <img src="icons/warning.svg" alt="" style="width:20px;">
+                <div>
+                    <strong>Note:</strong> The <code class="inline-code">shellTransform</code> behavior is not supported for security reasons.
+                </div>
+            </div>
+            <div class="alert alert-error">
+                <img src="icons/x-circle.svg" alt="" style="width:20px;">
+                <div>
+                    <strong>Impact:</strong> 1000s of tests × 10ms overhead = Significant CI/CD delays
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STAT BOXES -->
+    <div class="demo-section">
+        <h2>Stat Boxes</h2>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+            <div class="stat-box">
+                <div class="stat-icon stat-icon-coral">
+                    <img src="icons/folder.svg" alt="">
+                </div>
+                <div class="stat-value text-coral">35</div>
+                <div class="stat-label">Imposter Files</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon stat-icon-yellow">
+                    <img src="icons/star.svg" alt="">
+                </div>
+                <div class="stat-value text-yellow">674</div>
+                <div class="stat-label">Total Stubs</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon stat-icon-purple">
+                    <img src="icons/filter.svg" alt="">
+                </div>
+                <div class="stat-value text-purple">1,923</div>
+                <div class="stat-label">Predicates</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon stat-icon-green">
+                    <img src="icons/lightning.svg" alt="">
+                </div>
+                <div class="stat-value text-green">593</div>
+                <div class="stat-label">JS Behaviors</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESOURCE CARDS -->
+    <div class="demo-section">
+        <h2>Resource / Link Cards</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 500px;">
+            <div class="resource-card">
+                <div class="resource-icon resource-icon-dark">
+                    <img src="icons/git-branch.svg" alt="">
+                </div>
+                <div class="resource-content">
+                    <h4 class="resource-title">GitHub Repository</h4>
+                    <code class="resource-url">github.com/EtaCassiopeia/rift</code>
+                    <a href="#" class="resource-link">↗ Source Code & Examples</a>
+                </div>
+                <span class="resource-arrow">→</span>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon resource-icon-blue">
+                    <img src="icons/file-code.svg" alt="">
+                </div>
+                <div class="resource-content">
+                    <h4 class="resource-title">Documentation</h4>
+                    <code class="resource-url">etacassiopeia.github.io/rift/</code>
+                    <a href="#" class="resource-link">↗ Guides & API Reference</a>
+                </div>
+                <span class="resource-arrow">→</span>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon resource-icon-purple">
+                    <img src="icons/package.svg" alt="">
+                </div>
+                <div class="resource-content">
+                    <h4 class="resource-title">Docker Image</h4>
+                    <code class="resource-url">zainalpour/rift-proxy:latest</code>
+                </div>
+                <span class="resource-arrow">→</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

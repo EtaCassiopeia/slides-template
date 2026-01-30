@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rift Presentation - Color Palette</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f0f1a;
+            color: #ffffff;
+            padding: 40px;
+            min-height: 100vh;
+        }
+        h1 { margin-bottom: 10px; }
+        .subtitle { color: #9CA3AF; margin-bottom: 40px; }
+        .section { margin-bottom: 50px; }
+        .section h2 {
+            color: #E07A5F;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .color-card {
+            background: #1e2235;
+            border: 1px solid #2D3348;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .color-preview {
+            height: 80px;
+            position: relative;
+        }
+        .color-preview::after {
+            content: attr(data-hex);
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.5);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-family: monospace;
+        }
+        .color-info {
+            padding: 12px;
+        }
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .color-desc {
+            font-size: 12px;
+            color: #6B7280;
+        }
+        .copy-btn {
+            background: #2D3348;
+            border: none;
+            color: #9CA3AF;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-top: 8px;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background: #6366F1;
+            color: white;
+        }
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 16px;
+        }
+        .icon-card {
+            background: #1e2235;
+            border: 1px solid #2D3348;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .icon-card img {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 8px;
+        }
+        .icon-card span {
+            font-size: 11px;
+            color: #6B7280;
+            display: block;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .badge-coral {
+            background: rgba(224, 122, 95, 0.15);
+            border: 1px solid rgba(224, 122, 95, 0.3);
+            color: #E07A5F;
+        }
+        .badge-green {
+            background: rgba(129, 178, 154, 0.15);
+            border: 1px solid rgba(129, 178, 154, 0.3);
+            color: #81B29A;
+        }
+        .badge-blue {
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #6366F1;
+        }
+        .badge-purple {
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #8B5CF6;
+        }
+        .badge-yellow {
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #F59E0B;
+        }
+        .badge-red {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #EF4444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rift Presentation Color Palette</h1>
+    <p class="subtitle">Click any color code to copy to clipboard</p>
+
+    <div class="section">
+        <h2>Accent Colors</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-preview" style="background: #E07A5F;" data-hex="#E07A5F"></div>
+                <div class="color-info">
+                    <div class="color-name">Coral (Primary)</div>
+                    <div class="color-desc">Rift branding, highlights, important numbers</div>
+                    <button class="copy-btn" onclick="copyColor('#E07A5F')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #81B29A;" data-hex="#81B29A"></div>
+                <div class="color-info">
+                    <div class="color-name">Green</div>
+                    <div class="color-desc">Success states, checkmarks, positive metrics</div>
+                    <button class="copy-btn" onclick="copyColor('#81B29A')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #6366F1;" data-hex="#6366F1"></div>
+                <div class="color-info">
+                    <div class="color-name">Blue</div>
+                    <div class="color-desc">Links, interactive elements, info badges</div>
+                    <button class="copy-btn" onclick="copyColor('#6366F1')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #8B5CF6;" data-hex="#8B5CF6"></div>
+                <div class="color-info">
+                    <div class="color-name">Purple</div>
+                    <div class="color-desc">Feature highlights, special callouts</div>
+                    <button class="copy-btn" onclick="copyColor('#8B5CF6')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #F59E0B;" data-hex="#F59E0B"></div>
+                <div class="color-info">
+                    <div class="color-name">Yellow</div>
+                    <div class="color-desc">Warnings, attention, metrics</div>
+                    <button class="copy-btn" onclick="copyColor('#F59E0B')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #EF4444;" data-hex="#EF4444"></div>
+                <div class="color-info">
+                    <div class="color-name">Red</div>
+                    <div class="color-desc">Errors, negative states, problems</div>
+                    <button class="copy-btn" onclick="copyColor('#EF4444')">Copy HEX</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Background Colors</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-preview" style="background: #0f0f1a;" data-hex="#0F0F1A"></div>
+                <div class="color-info">
+                    <div class="color-name">Primary Background</div>
+                    <div class="color-desc">Main slide background</div>
+                    <button class="copy-btn" onclick="copyColor('#0F0F1A')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #1a1b2e;" data-hex="#1A1B2E"></div>
+                <div class="color-info">
+                    <div class="color-name">Secondary Background</div>
+                    <div class="color-desc">Code blocks, elevated surfaces</div>
+                    <button class="copy-btn" onclick="copyColor('#1A1B2E')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #1e2235;" data-hex="#1E2235"></div>
+                <div class="color-info">
+                    <div class="color-name">Card Background</div>
+                    <div class="color-desc">Card backgrounds, containers</div>
+                    <button class="copy-btn" onclick="copyColor('#1E2235')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #252836;" data-hex="#252836"></div>
+                <div class="color-info">
+                    <div class="color-name">Elevated Surface</div>
+                    <div class="color-desc">Hover states, elevated cards</div>
+                    <button class="copy-btn" onclick="copyColor('#252836')">Copy HEX</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Text Colors</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-preview" style="background: #FFFFFF;" data-hex="#FFFFFF"></div>
+                <div class="color-info">
+                    <div class="color-name">Primary Text</div>
+                    <div class="color-desc">Headings, important text</div>
+                    <button class="copy-btn" onclick="copyColor('#FFFFFF')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #9CA3AF;" data-hex="#9CA3AF"></div>
+                <div class="color-info">
+                    <div class="color-name">Secondary Text</div>
+                    <div class="color-desc">Body text, descriptions</div>
+                    <button class="copy-btn" onclick="copyColor('#9CA3AF')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #6B7280;" data-hex="#6B7280"></div>
+                <div class="color-info">
+                    <div class="color-name">Muted Text</div>
+                    <div class="color-desc">Labels, captions, subtle text</div>
+                    <button class="copy-btn" onclick="copyColor('#6B7280')">Copy HEX</button>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-preview" style="background: #2D3348;" data-hex="#2D3348"></div>
+                <div class="color-info">
+                    <div class="color-name">Border</div>
+                    <div class="color-desc">Card borders, dividers</div>
+                    <button class="copy-btn" onclick="copyColor('#2D3348')">Copy HEX</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Badge Styles</h2>
+        <div class="badge-row">
+            <span class="badge badge-coral">Coral Badge</span>
+            <span class="badge badge-green">Green Badge</span>
+            <span class="badge badge-blue">Blue Badge</span>
+            <span class="badge badge-purple">Purple Badge</span>
+            <span class="badge badge-yellow">Yellow Badge</span>
+            <span class="badge badge-red">Red Badge</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Icons (./icons/)</h2>
+        <div class="icon-grid">
+            <div class="icon-card"><img src="icons/rust-gear.svg" alt="rust-gear"><span>rust-gear</span></div>
+            <div class="icon-card"><img src="icons/checkmark.svg" alt="checkmark"><span>checkmark</span></div>
+            <div class="icon-card"><img src="icons/checkmark-circle.svg" alt="checkmark-circle"><span>checkmark-circle</span></div>
+            <div class="icon-card"><img src="icons/x-mark.svg" alt="x-mark"><span>x-mark</span></div>
+            <div class="icon-card"><img src="icons/x-circle.svg" alt="x-circle"><span>x-circle</span></div>
+            <div class="icon-card"><img src="icons/rocket.svg" alt="rocket"><span>rocket</span></div>
+            <div class="icon-card"><img src="icons/lightning.svg" alt="lightning"><span>lightning</span></div>
+            <div class="icon-card"><img src="icons/zap.svg" alt="zap"><span>zap (filled)</span></div>
+            <div class="icon-card"><img src="icons/target.svg" alt="target"><span>target</span></div>
+            <div class="icon-card"><img src="icons/code-brackets.svg" alt="code-brackets"><span>code-brackets</span></div>
+            <div class="icon-card"><img src="icons/terminal.svg" alt="terminal"><span>terminal</span></div>
+            <div class="icon-card"><img src="icons/search.svg" alt="search"><span>search</span></div>
+            <div class="icon-card"><img src="icons/chart-bar.svg" alt="chart-bar"><span>chart-bar</span></div>
+            <div class="icon-card"><img src="icons/warning.svg" alt="warning"><span>warning</span></div>
+            <div class="icon-card"><img src="icons/info-circle.svg" alt="info-circle"><span>info-circle</span></div>
+            <div class="icon-card"><img src="icons/folder.svg" alt="folder"><span>folder</span></div>
+            <div class="icon-card"><img src="icons/file-code.svg" alt="file-code"><span>file-code</span></div>
+            <div class="icon-card"><img src="icons/filter.svg" alt="filter"><span>filter</span></div>
+            <div class="icon-card"><img src="icons/clock.svg" alt="clock"><span>clock</span></div>
+            <div class="icon-card"><img src="icons/database.svg" alt="database"><span>database</span></div>
+            <div class="icon-card"><img src="icons/settings.svg" alt="settings"><span>settings</span></div>
+            <div class="icon-card"><img src="icons/arrow-right.svg" alt="arrow-right"><span>arrow-right</span></div>
+            <div class="icon-card"><img src="icons/play.svg" alt="play"><span>play</span></div>
+            <div class="icon-card"><img src="icons/star.svg" alt="star"><span>star</span></div>
+            <div class="icon-card"><img src="icons/shield.svg" alt="shield"><span>shield</span></div>
+            <div class="icon-card"><img src="icons/layers.svg" alt="layers"><span>layers</span></div>
+            <div class="icon-card"><img src="icons/link.svg" alt="link"><span>link</span></div>
+            <div class="icon-card"><img src="icons/server.svg" alt="server"><span>server</span></div>
+            <div class="icon-card"><img src="icons/cpu.svg" alt="cpu"><span>cpu</span></div>
+            <div class="icon-card"><img src="icons/speedometer.svg" alt="speedometer"><span>speedometer</span></div>
+            <div class="icon-card"><img src="icons/package.svg" alt="package"><span>package</span></div>
+            <div class="icon-card"><img src="icons/wrench.svg" alt="wrench"><span>wrench</span></div>
+            <div class="icon-card"><img src="icons/dollar.svg" alt="dollar"><span>dollar</span></div>
+            <div class="icon-card"><img src="icons/monitor.svg" alt="monitor"><span>monitor</span></div>
+            <div class="icon-card"><img src="icons/git-branch.svg" alt="git-branch"><span>git-branch</span></div>
+            <div class="icon-card"><img src="icons/number-1.svg" alt="number-1"><span>number-1</span></div>
+            <div class="icon-card"><img src="icons/number-2.svg" alt="number-2"><span>number-2</span></div>
+            <div class="icon-card"><img src="icons/number-3.svg" alt="number-3"><span>number-3</span></div>
+            <div class="icon-card"><img src="icons/number-4.svg" alt="number-4"><span>number-4</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyColor(hex) {
+            navigator.clipboard.writeText(hex).then(() => {
+                alert('Copied: ' + hex);
+            });
+        }
+    </script>
+</body>
+</html>
